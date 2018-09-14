@@ -1,0 +1,30 @@
+<%- include('../../libs/html/util-m/header', {
+title: 'H5支付',
+description: '',
+keywords: '',
+plugin: [''],
+private: ['../css/pay.css']
+}) %>
+
+<div class="main">
+    <div class="pay">
+        <div class="pay-entrance" id="entrance">
+            <div class="close"><img src="../img/close.png" alt=""></div>
+            <!--<div class="pay-wx" id="pay-wx"><img src="../img/wx.png" alt=""><span>微信支付</span></div>
+            <div class="pay-zfb" id="pay-zfb"><img src="../img/zhifub.png" alt=""><span>支付宝支付</span></div>-->
+            <div class="pay-wx" id="pay-yl"><img src="../img/wx.png" alt=""><span>银联支付</span></div>
+            <div class="pay-zfb" id="pay-hnjy"><img src="../img/zhifub.png" alt=""><span>支付宝支付</span></div>
+            <!--<div id="pay-yl">银联支付</div>-->
+            <!--<div id="pay-hnjy">海南精英-支付宝WAP充值</div>-->
+            <iframe frameborder="0" id="posthere" name="posthere"></iframe>
+            <div id="control-zfb"></div>
+            <div class="tip-modal">支付完成!</div>
+        </div>
+    </div>
+</div>
+
+<%- include('../../libs/html/util-m/footer', {
+plugin: ['https://common.8864.com/web/js/zepto.cookie.min.js', 'https://common.8864.com/web/js/zepto-md5.js'],
+private: ['../js/payTest.js'],
+statistics: ['']
+}) %>

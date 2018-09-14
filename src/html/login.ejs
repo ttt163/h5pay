@@ -1,0 +1,191 @@
+<%- include('../../libs/html/util-m/header', {
+title: 'H5登录',
+description: '',
+keywords: '',
+plugin: [''],
+private: ['../css/index.css']
+}) %>
+
+<div class="main">
+    <div id="m-login-btn">登录</div>
+    <div id="m-set-psw">用户中心</div>
+    <!--提示-->
+    <div class="popHink" id="hink">
+        <div class="hink-child"></div>
+    </div>
+    <!--统一入口-->
+    <div class="login-entrance" id="entrance">
+        <div class="close"><img src="../img/close.png" alt=""></div>
+        <div class="login-entrance-cont">
+            <div class="login-temporary" id="temporaryLogin"><img src="../img/lksdk_account_guest_icon_enabled.png" alt=""></div>
+            <div class="login-phone" id="phoneLogin"><img src="../img/lksdk_account_shouji.png" alt=""></div>
+            <div class="login-wx"><img src="../img/lksdk_account_weixin.png" alt=""></div>
+            <div class="login-qq"><img src="../img/lksdk_account_qq.png" alt=""></div>
+        </div>
+    </div>
+    <!--输入手机号-->
+    <div class="login-write-phone write" id="phoneWrite">
+        <div class="back"><img src="../img/back.png" alt=""></div>
+        <div class="input-phone">
+            <span><img src="../img/phe.png" alt=""></span>
+            <input type="tel" class="detectionPhone" id="detectionPhone" placeholder="输入手机号" maxlength="11">
+            <p class="phone-hink">注册即表示同意<a href="">《蓝港服务条款》</a></p>
+        </div>
+        <button class="phone-next-btn active" disabled>下一步</button>
+    </div>
+    <!--已注册登录密码验证码-->
+    <div class="login-phone-psd" id="phonePassword">
+        <div class="back"><img src="../img/back.png" alt=""></div>
+        <div class="tab-label">
+            <ul>
+                <li class="label-code active">验证码登录</li>
+                <li class="label-password">密码登录</li>
+            </ul>
+        </div>
+        <div class="input-phone-psd">
+            <div class="tab-list phone-code-m active">
+                <span><img src="../img/psw.png" alt=""></span><input type="tel" maxlength="6" placeholder="输入验证码">
+                <button class="psd-time">获取验证码</button>
+                <button class="phone-enter c active" id="codeMBtn" disabled>登录</button>
+            </div>
+            <div class="tab-list phone-psd-m">
+                <span><img src="../img/psw.png" alt=""></span><input type="password" placeholder="输入密码">
+                <div class="forget-psd">找回密码?</div>
+                <button class="phone-enter p active" id="psdMBtn" disabled>登录</button>
+            </div>
+        </div>
+    </div>
+    <!--已注册验证码登录-->
+    <div class="login-phone-slready-Code" id="phoneAlreadyCode">
+        <div class="back"><img src="../img/back.png" alt=""></div>
+        <div class="input-phone-psd">
+            <div class="tab-list phone-code-m active">
+                <span><img src="../img/psw.png" alt=""></span><input type="tel" maxlength="6" placeholder="输入验证码">
+                <button class="psd-time">获取验证码</button>
+                <button class="phone-enter c active" id="codeMBtn" disabled>登录</button>
+            </div>
+        </div>
+    </div>
+    <!--用户中心-->
+    <div class="login-attestation" id="attestation">
+        <div class="close"><img src="../img/close.png" alt=""></div>
+        <div class="login-attestation-cont">
+            <div class="login-bound-p"><img src="../img/bound-p.png" alt=""><span>绑定手机</span></div>
+            <div class="login-set-psd"><img src="../img/set-spd.png" alt=""><span>设置密码</span></div>
+            <div class="login-amend-psd"><img src="../img/set-spd.png" alt=""><span>修改密码</span></div>
+            <div class="login-autonym"><img src="../img/approve.png" alt=""><span>实名认证</span></div>
+            <div class="login-exit"><img src="../img/exit.png" alt=""><span>退出登录</span></div>
+        </div>
+    </div>
+    <div class="game-login-exit">
+        <div class="exit-hink">退出当前账号并跳转到登录界面？</div>
+        <div class="hink-confirm">确定</div>
+        <div class="hink-abolish">取消</div>
+    </div>
+    <!--实名认证填入-->
+    <div class="login-attestation-write" id="">
+        <div class="back"><img src="../img/back.png" alt=""></div>
+        <div class="input-text1">
+            <span><img src="../img/p1.png" alt=""></span>
+            <input type="text" placeholder="输入真实姓名">
+        </div>
+        <div class="input-text2">
+            <span><img src="../img/p2.png" alt=""></span>
+            <input type="tel" maxlength="18" placeholder="输入身份证号码">
+            <p class="phone-hink">根据文化部要求，游戏用户需使用有效身份信息进行实名认证</p>
+        </div>
+        <button class="attestation-btn active" disabled>认证</button>
+    </div>
+    <!--绑定手机-->
+    <div class="login-bound-phone" id="boundPhone">
+        <div class="close"><img src="../img/close.png" alt=""></div>
+        <div class="login-bound-p"><img src="../img/bound-p.png" alt=""><span>绑定手机</span></div>
+        <div class="login-exit"><img src="../img/exit.png" alt=""><span>退出登录</span></div>
+    </div>
+    <!--绑定手机号详情-->
+    <div class="login-write-phone binding" id="bindingWrite">
+        <div class="back"><img src="../img/back.png" alt=""></div>
+        <div class="input-phone">
+            <span><img src="../img/phe.png" alt=""></span>
+            <input type="tel" class="detectionPhone" id="bindingPhone" placeholder="输入手机号" maxlength="11">
+        </div>
+        <div class="input-phone i-binding">
+            <span><img src="../img/psw.png" alt=""></span><input class="bindCode" type="tel" maxlength="6" placeholder="输入验证码">
+            <button class="psd-time-bind active" disabled>获取验证码</button>
+        </div>
+        <button class="phone-binding-btn active" disabled>绑定</button>
+    </div>
+    <!--未注册-->
+    <div class="login-register not" id="loginNotRegister">
+        <div class="back"><img src="../img/back.png" alt=""></div>
+        <div class="input-register">
+            <div class="phone-code-m">
+                <span><img src="../img/psw.png" alt=""></span><input class="code-yanzheng" type="tel" maxlength="6" placeholder="输入验证码">
+                <button class="psd-time-register" >获取验证码</button>
+                <p class="phone-hink">注册即表示同意<a href="">《蓝港服务条款》</a></p>
+            </div>
+        </div>
+        <button class="phone-enter-register active" disabled>注册并登录</button>
+    </div>
+    <div class="login-register already" id="loginRegister">
+        <div class="back"><img src="../img/back.png" alt=""></div>
+        <div class="input-register">
+            <div class="phone-code-m">
+                <span><img src="../img/psw.png" alt=""></span><input class="code-yanzheng" type="tel" maxlength="6" placeholder="输入验证码">
+                <button class="psd-time-register" >获取验证码</button>
+                <p class="phone-hink">注册即表示同意<a href="">《蓝港服务条款》</a></p>
+            </div>
+        </div>
+        <button class="phone-enter-already-btn active" disabled>登录</button>
+    </div>
+    <!--设置密码-->
+    <div class="login-set-password" id="setPassword">
+        <div class="back"><img src="../img/back.png" alt=""></div>
+        <div class="input-phone">
+            <span><img src="../img/psw.png" alt=""></span>
+            <input type="tel" id="setInpPasw" placeholder="请输入新密码" maxlength="31">
+            <p class="phone-hink">格式要求：6~31位字母或数字组合</p>
+        </div>
+        <button class="set-pas-btn active" disabled>确定</button>
+    </div>
+    <!--修改密码-->
+    <div class="login-amend-password" id="amendPassword">
+        <div class="close"><img src="../img/close.png" alt=""></div>
+        <div class="input-phone">
+            <span><img src="../img/psw.png" alt=""></span>
+            <input type="tel" class="oldPasw" id="amendOldInpPasw" placeholder="请输入当前密码" maxlength="31">
+        </div>
+        <div class="input-phone amend">
+            <span><img src="../img/psw.png" alt=""></span>
+            <input type="tel" class="newPasw" id="amendNewInpPasw" placeholder="请输入新密码" maxlength="31">
+        </div>
+        <button class="amend-pas-btn active" disabled>确定</button>
+    </div>
+    <!--找回密码-->
+    <div class="find-password">
+        <div class="close"><img src="../img/close.png" alt=""></div>
+        <div class="find-pas-input phone">
+            <span><img src="../img/phe.png" alt=""></span><input type="tel" id="find-phone" maxlength="6" disabled>
+        </div>
+        <div class="find-pas-input code">
+            <span><img src="../img/psw.png" alt=""></span><input type="tel" id="find-code" maxlength="6" placeholder="输入验证码">
+            <button class="find-psd-time">获取验证码</button>
+        </div>
+        <button class="find-m-btn active" id="findMBtn" disabled>下一步</button>
+    </div>
+    <!--找回密码设置新密码-->
+    <div class="find-password-new">
+        <div class="close"><img src="../img/close.png" alt=""></div>
+        <div class="input-phone">
+            <span><img src="../img/psw.png" alt=""></span>
+            <input type="tel" id="findInpPasw" placeholder="请输入新密码" maxlength="31">
+            <p class="phone-hink">格式要求：6~31位字母或数字组合</p>
+        </div>
+        <button class="find-pas-btn active" disabled>确定</button>
+    </div>
+</div>
+<%- include('../../libs/html/util-m/footer', {
+plugin: ['https://common.8864.com/web/js/zepto.cookie.min.js', 'https://common.8864.com/web/js/zepto-md5.js', 'https://common.8864.com/web/js/rsa/jsencrypt.min.js'],
+private: ['../js/login.js'],
+statistics: ['']
+}) %>

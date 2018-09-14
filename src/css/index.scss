@@ -1,0 +1,1028 @@
+/**
+ * Author：zhoushuanglong
+ * Time：2017-08-29 19:30
+ * Description：index
+ */
+@import "../../libs/scss/util-m";
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background: #000;
+
+    .main {
+        width: 100%;
+        height: 100%;
+
+        #hink {
+            position: absolute;
+            animation: 0.5s;
+        }
+
+        .popHink {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+
+            .hink-child {
+                height: rem(25);
+                line-height: rem(25);
+                color: #333;
+                font-size: rem(16);
+                background: #c0c0c0;
+                border-radius: rem(10);
+                padding: rem(10) rem(20);
+                z-index: 20;
+            }
+        }
+
+        .close {
+            position: absolute;
+            right: rem(10);
+            top: rem(10);
+
+            img {
+                width: rem(40);
+                height: rem(40);
+            }
+        }
+
+        .back {
+            position: absolute;
+            left: rem(15);
+            top: rem(15);
+
+            img {
+                width: rem(40);
+                height: rem(40);
+            }
+        }
+
+        #m-login-btn,
+        #m-set-psw,
+        #m-change-psw,
+        #m-card,
+        #m-binding-phone {
+            position: fixed;
+            font-size: rem(16);
+            color: #fff;
+            z-index: 1;
+            width: rem(80);
+            height: rem(40);
+            line-height: rem(40);
+            text-align: center;
+            background: #c0c0c0;
+            border-radius: rem(5);
+        }
+
+        #m-set-psw {
+            top: rem(60);
+            z-index: -10;
+        }
+
+        #m-change-psw {
+            top: rem(120);
+        }
+
+        #m-binding-phone {
+            top: rem(180);
+        }
+
+        .login-entrance {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            border-radius: rem(10);
+            z-index: -10;
+
+            .login-entrance-cont {
+                margin: 0 auto;
+                margin-top: rem(100);
+                display: table;
+
+                .login-temporary,
+                .login-phone,
+                .login-wx,
+                .login-qq {
+                    margin: 0 rem(20);
+                    float: left;
+                    text-align: center;
+
+                    img {
+                        width: rem(80);
+                    }
+                }
+            }
+        }
+
+        .login-write-phone {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            border-radius: rem(10);
+            z-index: -10;
+
+            &.binding {
+                height: 100%;
+
+                .psd-time,
+                .psd-time-bind {
+                    position: absolute;
+                    right: 0;
+                    top: rem(10);
+                    width: rem(100);
+                    height: rem(40);
+                    line-height: rem(40);
+                    text-align: center;
+                    border-radius: rem(10);
+                    background: #449af8;
+                    font-size: rem(16);
+                    color: #fff;
+                    border: none;
+
+                    &.active {
+                        background: #c0c0c0;
+                        color: #fff;
+                    }
+                }
+
+                span {
+                    position: absolute;
+                    display: block;
+                    left: rem(10);
+                    top: rem(16);
+
+                    img {
+                        width: rem(20);
+                        height: rem(22);
+                    }
+                }
+            }
+
+            .input-phone {
+                position: absolute;
+                left: 10%;
+                top: 25%;
+                width: 80%;
+                height: rem(60);
+                border-bottom: 1px #edeef0 solid;
+                border-top: 1px #edeef0 solid;
+
+                &.i-binding {
+                    top: 47%;
+                    border-top: none;
+                }
+
+                input {
+                    position: absolute;
+                    width: 80%;
+                    height: rem(40);
+                    top: 15%;
+                    left: 10%;
+                    font-size: rem(18);
+                    border: none;
+                    line-height: rem(40);
+                }
+
+                .phone-hink {
+                    position: absolute;
+                    bottom: rem(-30);
+                    left: rem(10);
+                    font-size: rem(16);
+                    color: #999;
+
+                    a {
+                        color: #3882f7;
+                    }
+                }
+
+                span {
+                    position: absolute;
+                    display: block;
+                    left: rem(10);
+                    top: rem(16);
+
+                    img {
+                        width: rem(20);
+                        height: rem(22);
+                    }
+                }
+            }
+
+            .phone-next-btn,
+            .phone-binding-btn {
+                position: absolute;
+                width: 80%;
+                left: 10%;
+                bottom: 5%;
+                background: #449af8;
+                border-radius: rem(10);
+                color: #fff;
+                height: rem(50);
+                line-height: rem(50);
+                font-size: rem(18);
+                text-align: center;
+                border: none;
+
+                &.active {
+                    background: #c0c0c0;
+                }
+            }
+        }
+
+        .login-set-password {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            border-radius: rem(10);
+            z-index: -10;
+
+            .input-phone {
+                position: absolute;
+                left: 10%;
+                top: 25%;
+                width: 80%;
+                height: rem(60);
+                border-bottom: 1px #edeef0 solid;
+                border-top: 1px #edeef0 solid;
+
+                span {
+                    position: absolute;
+                    display: block;
+                    left: rem(10);
+                    top: rem(16);
+
+                    img {
+                        width: rem(20);
+                        height: rem(22);
+                    }
+                }
+
+                input {
+                    position: absolute;
+                    width: 80%;
+                    height: rem(40);
+                    top: 15%;
+                    left: 10%;
+                    font-size: rem(18);
+                    border: none;
+                    line-height: rem(40);
+                }
+
+                .phone-hink {
+                    position: absolute;
+                    bottom: rem(-30);
+                    left: rem(10);
+                    font-size: rem(16);
+                    color: #999;
+
+                    a {
+                        color: #3882f7;
+                    }
+                }
+            }
+
+            .set-pas-btn {
+                position: absolute;
+                width: 80%;
+                left: 10%;
+                bottom: 5%;
+                background: #449af8;
+                border-radius: rem(10);
+                color: #fff;
+                height: rem(50);
+                line-height: rem(50);
+                font-size: rem(18);
+                text-align: center;
+                border: none;
+
+                &.active {
+                    background: #c0c0c0;
+                }
+            }
+        }
+
+        .login-amend-password {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            border-radius: rem(10);
+            z-index: -10;
+
+            .input-phone {
+                position: absolute;
+                left: 10%;
+                top: 25%;
+                width: 80%;
+                height: rem(60);
+                border-bottom: 1px #edeef0 solid;
+                border-top: 1px #edeef0 solid;
+
+                &.amend {
+                    top: 45%;
+                    border-top: none;
+                }
+
+                span {
+                    position: absolute;
+                    display: block;
+                    left: rem(10);
+                    top: rem(16);
+
+                    img {
+                        width: rem(20);
+                        height: rem(22);
+                    }
+                }
+
+                input {
+                    position: absolute;
+                    width: 80%;
+                    height: rem(40);
+                    top: 15%;
+                    left: 10%;
+                    font-size: rem(18);
+                    border: none;
+                    line-height: rem(40);
+                }
+
+                .phone-hink {
+                    position: absolute;
+                    bottom: rem(-30);
+                    left: rem(10);
+                    font-size: rem(16);
+                    color: #999;
+
+                    a {
+                        color: #3882f7;
+                    }
+                }
+            }
+
+            .amend-pas-btn {
+                position: absolute;
+                width: 80%;
+                left: 10%;
+                bottom: 5%;
+                background: #449af8;
+                border-radius: rem(10);
+                color: #fff;
+                height: rem(50);
+                line-height: rem(50);
+                font-size: rem(18);
+                text-align: center;
+                border: none;
+
+                &.active {
+                    background: #c0c0c0;
+                }
+            }
+        }
+
+        .login-phone-psd,
+        .login-phone-slready-Code {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            border-radius: rem(10);
+            z-index: -10;
+
+            .tab-label {
+                position: absolute;
+                width: 70%;
+                left: 15%;
+                top: 15%;
+                height: rem(60);
+
+                li {
+                    float: left;
+                    width: 50%;
+                    height: rem(50);
+                    line-height: rem(50);
+                    text-align: center;
+                    font-size: rem(20);
+                    border: 1px #449af8 solid;
+                    box-sizing: border-box;
+                    color: #449af8;
+
+                    &.active {
+                        background: #449af8;
+                        color: #fff;
+                    }
+
+                    &.label-code {
+                        border-top-left-radius: rem(10);
+                        border-bottom-left-radius: rem(10);
+                    }
+
+                    &.label-password {
+                        border-top-right-radius: rem(10);
+                        border-bottom-right-radius: rem(10);
+                    }
+                }
+            }
+
+            .input-phone-psd {
+                position: absolute;
+                left: 10%;
+                top: 38%;
+                width: 80%;
+                height: rem(60);
+                border-bottom: 1px #edeef0 solid;
+                border-top: 1px #edeef0 solid;
+
+                .phone-psd-m,
+                .phone-code-m {
+                    display: none;
+
+                    input {
+                        position: absolute;
+                        width: 80%;
+                        height: rem(40);
+                        top: 15%;
+                        left: 10%;
+                        font-size: rem(18);
+                        border: none;
+                        line-height: rem(40);
+                    }
+
+                    span {
+                        position: absolute;
+                        display: block;
+                        left: rem(10);
+                        top: rem(16);
+
+                        img {
+                            width: rem(20);
+                            height: rem(22);
+                        }
+                    }
+                }
+
+                .phone-psd-m {
+                    &.active {
+                        display: block;
+                    }
+
+                    .forget-psd {
+                        position: absolute;
+                        right: 0;
+                        bottom: rem(-30);
+                        color: #ccc;
+                        font-size: rem(18);
+                    }
+                }
+
+                .phone-code-m {
+                    &.active {
+                        display: block;
+                    }
+
+                    .psd-time {
+                        position: absolute;
+                        right: 0;
+                        top: rem(10);
+                        width: rem(100);
+                        height: rem(40);
+                        line-height: rem(40);
+                        text-align: center;
+                        border-radius: rem(10);
+                        background: #449af8;
+                        font-size: rem(16);
+                        color: #fff;
+                        border: none;
+
+                        &.active {
+                            background: #c0c0c0;
+                            color: #449af8;
+                        }
+                    }
+                }
+            }
+
+            .phone-enter {
+                position: absolute;
+                width: 90%;
+                left: 5%;
+                bottom: rem(-100);
+                background: #449af8;
+                border-radius: rem(10);
+                color: #fff;
+                height: rem(50);
+                line-height: rem(50);
+                font-size: rem(18);
+                text-align: center;
+                border: none;
+
+                &.active {
+                    background: #c0c0c0;
+                }
+            }
+        }
+
+        .login-phone-slready-Code {
+            display: none;
+        }
+
+        .login-attestation {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            border-radius: rem(10);
+            z-index: -10;
+
+            .login-attestation-cont {
+                height: rem(120);
+                margin: 0 auto;
+                margin-top: rem(100);
+                display: table;
+
+                .login-set-psd,
+                .login-autonym,
+                .login-exit,
+                .login-bound-p,
+                .login-amend-psd {
+                    position: relative;
+                    margin: 0 rem(20);
+                    float: left;
+                    text-align: center;
+
+                    img {
+                        width: rem(85);
+                        height: rem(85);
+                    }
+
+                    span {
+                        position: absolute;
+                        display: block;
+                        width: rem(85);
+                        bottom: rem(-30);
+                        text-align: center;
+                        color: #5e5d5c;
+                        font-size: rem(18);
+                    }
+                }
+            }
+        }
+
+        .login-bound-phone {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            border-radius: rem(10);
+            z-index: -10;
+
+            .login-bound-p,
+            .login-exit {
+                position: absolute;
+                left: rem(50);
+                top: rem(70);
+
+                img {
+                    width: rem(85);
+                    height: rem(85);
+                }
+
+                span {
+                    position: absolute;
+                    display: block;
+                    width: rem(85);
+                    top: rem(95);
+                    text-align: center;
+                    color: #5e5d5c;
+                    font-size: rem(18);
+                }
+            }
+
+            .login-bound-p {
+                left: rem(160);
+            }
+
+            .login-exit {
+                left: rem(320);
+            }
+        }
+
+        .login-attestation-write {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            border-radius: rem(10);
+            z-index: -10;
+
+            .input-text1,
+            .input-text2 {
+                position: absolute;
+                left: 10%;
+                top: 20%;
+                width: 80%;
+                height: rem(60);
+                border-bottom: 1px #edeef0 solid;
+                border-top: 1px #edeef0 solid;
+
+                input {
+                    position: absolute;
+                    width: 80%;
+                    height: rem(40);
+                    top: 15%;
+                    left: 10%;
+                    font-size: rem(18);
+                    border: none;
+                    line-height: rem(40);
+                }
+
+                .phone-hink {
+                    position: absolute;
+                    bottom: rem(-30);
+                    left: rem(10);
+                    font-size: rem(16);
+                    color: #999;
+                }
+
+                span {
+                    display: block;
+                    position: absolute;
+                    left: rem(10);
+                    top: rem(15);
+
+                    img {
+                        width: rem(20);
+                        height: rem(19);
+                    }
+                }
+            }
+
+            .input-text2 {
+                top: 39.5%;
+                border-top: none;
+
+                span {
+                    img {
+                        width: rem(25);
+                        height: rem(19);
+                    }
+                }
+            }
+
+            .attestation-btn {
+                position: absolute;
+                width: 80%;
+                left: 10%;
+                bottom: 5%;
+                background: #449af8;
+                border-radius: rem(10);
+                color: #fff;
+                height: rem(50);
+                line-height: rem(50);
+                font-size: rem(18);
+                text-align: center;
+                border: none;
+
+                &.active {
+                    background: #c0c0c0;
+                }
+            }
+        }
+
+        .login-register {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            border-radius: rem(10);
+            z-index: -10;
+
+            .input-register {
+                position: absolute;
+                left: 10%;
+                top: 25%;
+                width: 80%;
+                height: rem(60);
+                border-bottom: 1px #edeef0 solid;
+                border-top: 1px #edeef0 solid;
+
+                .phone-code-m {
+                    input {
+                        position: absolute;
+                        width: 80%;
+                        height: rem(40);
+                        top: 15%;
+                        left: 10%;
+                        font-size: rem(18);
+                        border: none;
+                        line-height: rem(40);
+                    }
+
+                    span {
+                        position: absolute;
+                        display: block;
+                        left: rem(10);
+                        top: rem(16);
+
+                        img {
+                            width: rem(20);
+                            height: rem(22);
+                        }
+                    }
+
+                    .forget-psd {
+                        position: absolute;
+                        right: 0;
+                        bottom: rem(-30);
+                        color: #ccc;
+                        font-size: rem(18);
+                    }
+
+                    .psd-time-register {
+                        position: absolute;
+                        right: 0;
+                        top: rem(10);
+                        width: rem(100);
+                        height: rem(40);
+                        line-height: rem(40);
+                        text-align: center;
+                        border-radius: rem(10);
+                        background: #449af8;
+                        font-size: rem(16);
+                        color: #fff;
+                        border: none;
+
+                        &.active {
+                            background: #c0c0c0;
+                            color: #449af8;
+                        }
+                    }
+
+                    .phone-hink {
+                        position: absolute;
+                        bottom: rem(-30);
+                        left: rem(10);
+                        font-size: rem(16);
+                        color: #999;
+
+                        a {
+                            color: #3882f7;
+                        }
+                    }
+                }
+            }
+
+            .phone-enter-register {
+                position: absolute;
+                width: 80%;
+                left: 10%;
+                bottom: 5%;
+                background: #449af8;
+                border-radius: rem(10);
+                color: #fff;
+                height: rem(50);
+                line-height: rem(50);
+                font-size: rem(18);
+                text-align: center;
+                border: none;
+
+                &.active {
+                    background: #c0c0c0;
+                }
+            }
+
+            .phone-enter-already-btn {
+                position: absolute;
+                width: 80%;
+                left: 10%;
+                bottom: 5%;
+                background: #449af8;
+                border-radius: rem(10);
+                color: #fff;
+                height: rem(50);
+                line-height: rem(50);
+                font-size: rem(18);
+                text-align: center;
+                border: none;
+
+                &.active {
+                    background: #c0c0c0;
+                }
+            }
+        }
+
+        .game-login-exit {
+            position: absolute;
+            left: 25%;
+            width: 50%;
+            top: 50%;
+            margin-top: rem(-75);
+            height: rem(150);
+            background: #fff;
+            border-radius: rem(10);
+            border: 1px #c0c0c0 solid;
+            z-index: -1;
+
+            .exit-hink {
+                position: absolute;
+                width: 100%;
+                top: 10%;
+                text-align: center;
+                font-size: rem(16);
+                color: #666;
+            }
+
+            .hink-confirm,
+            .hink-abolish {
+                position: absolute;
+                width: 30%;
+                bottom: 10%;
+                height: rem(45);
+                line-height: rem(45);
+                background: #449af8;
+                border-radius: rem(5);
+                text-align: center;
+                font-size: rem(18);
+                color: #fff;
+            }
+
+            .hink-confirm {
+                left: 10%;
+            }
+
+            .hink-abolish {
+                right: 10%;
+            }
+        }
+
+        .find-password {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            border-radius: rem(10);
+            z-index: -10;
+
+            .find-pas-input {
+                position: absolute;
+                left: 10%;
+                width: 80%;
+                height: rem(60);
+                border-bottom: 1px #edeef0 solid;
+                border-top: 1px #edeef0 solid;
+
+                &.phone {
+                    top: 25%;
+                }
+
+                &.code {
+                    top: 47%;
+                    border-top: none;
+                }
+
+                input {
+                    position: absolute;
+                    width: 80%;
+                    height: rem(40);
+                    top: 15%;
+                    left: 10%;
+                    font-size: rem(18);
+                    border: none;
+                    line-height: rem(40);
+                    background: #fff;
+                }
+
+                span {
+                    position: absolute;
+                    display: block;
+                    left: rem(10);
+                    top: rem(16);
+
+                    img {
+                        width: rem(20);
+                        height: rem(22);
+                    }
+                }
+
+                .find-psd-time {
+                    position: absolute;
+                    right: 0;
+                    top: rem(10);
+                    width: rem(100);
+                    height: rem(40);
+                    line-height: rem(40);
+                    text-align: center;
+                    border-radius: rem(10);
+                    background: #449af8;
+                    font-size: rem(16);
+                    color: #fff;
+                    border: none;
+
+                    &.active {
+                        background: #c0c0c0;
+                        color: #fff;
+                    }
+                }
+            }
+
+            .find-m-btn {
+                position: absolute;
+                width: 80%;
+                left: 10%;
+                bottom: 5%;
+                background: #449af8;
+                border-radius: rem(10);
+                color: #fff;
+                height: rem(50);
+                line-height: rem(50);
+                font-size: rem(18);
+                text-align: center;
+                border: none;
+
+                &.active {
+                    background: #c0c0c0;
+                }
+            }
+        }
+
+        .find-password-new {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            border-radius: rem(10);
+            z-index: -10;
+
+            .input-phone {
+                position: absolute;
+                left: 10%;
+                top: 25%;
+                width: 80%;
+                height: rem(60);
+                border-bottom: 1px #edeef0 solid;
+                border-top: 1px #edeef0 solid;
+
+                span {
+                    position: absolute;
+                    display: block;
+                    left: rem(10);
+                    top: rem(16);
+
+                    img {
+                        width: rem(20);
+                        height: rem(22);
+                    }
+                }
+
+                input {
+                    position: absolute;
+                    width: 80%;
+                    height: rem(40);
+                    top: 15%;
+                    left: 10%;
+                    font-size: rem(18);
+                    border: none;
+                    line-height: rem(40);
+                }
+
+                .phone-hink {
+                    position: absolute;
+                    bottom: rem(-30);
+                    left: rem(10);
+                    font-size: rem(16);
+                    color: #999;
+
+                    a {
+                        color: #3882f7;
+                    }
+                }
+            }
+
+            .find-pas-btn {
+                position: absolute;
+                width: 80%;
+                left: 10%;
+                bottom: 5%;
+                background: #449af8;
+                border-radius: rem(10);
+                color: #fff;
+                height: rem(50);
+                line-height: rem(50);
+                font-size: rem(18);
+                text-align: center;
+                border: none;
+
+                &.active {
+                    background: #c0c0c0;
+                }
+            }
+        }
+    }
+}
